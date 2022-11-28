@@ -35,7 +35,7 @@ const SetRepoAddress = () => {
     if (
       statusCodeUsername === constants.statusCodes.notFound ||
       statusCodeRepo === constants.statusCodes.notFound ||
-      !isOnline
+      !isOnline || showErrorMessage
     ) {
       setBackgroundColor(constants.colors.errorBackground);
     } else if (
@@ -45,7 +45,7 @@ const SetRepoAddress = () => {
       setBackgroundColor(constants.colors.successBackground);
       setShowSendButton(true);
     }
-  }, [statusCodeUsername, statusCodeRepo, isOnline]);
+  }, [statusCodeUsername, statusCodeRepo, isOnline, showErrorMessage]);
 
   const sendRepo = () => {
     ApiService.sendRepositoryUrl(username, repository)
@@ -120,7 +120,7 @@ const SetRepoAddress = () => {
       {showErrorMessage && (
         <p>
           The message
-          <span className="errorMessage">was not sent successfully</span>
+          <span className="errorMessage"> was not sent successfully</span>
         </p>
       )}
 

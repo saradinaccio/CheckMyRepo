@@ -17,7 +17,7 @@ export default class ApiService {
   };
 
   static sendRepositoryUrl = async (username: string, repo: string) => {
-   return await axios.post(constants.api.sendRepositoryUrl, `repoUrl=${GITHUB_PREFIX}${username}/${repo}, sender=Sara`);
+   return await axios.post(constants.api.sendRepositoryUrl, `repoUrl=${GITHUB_PREFIX}${username}/${repo}, sender=Sara Di Naccio`);
   };
   
 }

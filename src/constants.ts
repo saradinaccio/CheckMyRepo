@@ -10,7 +10,7 @@ const constants = {
   api: {
     checkUsername:  `${GITHUB_API_PREFIX}users/{username}`,
     checkRepo: `${GITHUB_API_PREFIX}repos/{username}/{repo}` ,
-    sendRepositoryUrl: 'https://pushmore.io/webhook/PjtBA7znLAL7WozsijQS5aDM'
+    sendRepositoryUrl: 'https://pushmore.io/webhook/d3Gm4aEPCuhAUjfbECLLdW41'
   },
   colors: {
     successBackground: '#CAFFDA',
